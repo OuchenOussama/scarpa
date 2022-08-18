@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<link rel="stylesheet" href="indexStyle.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.typekit.net/ovr1gce.css">
+<link rel="stylesheet/scss" href="slideShow.css">
+<script src="slideShow.js" ></script>
+<script language="JavaScript">
+    function showSearchBox(ele){
+        var division = document.getElementById(ele);
+        if(division.style.display == "none"){ division.style.display = 'inherit'; }
+        else{ division.style.display = 'none'; }
+    }
+</script>
+
+</head>
+
+<body>
+<header>
+<nav>
+    <div class="left">
+        <a href="">LATEST</a>
+        <a href="">SNEAKERS</a>
+        <a href="">MEN</a>
+        <a href="">WOMEN</a>
+    </div>
+
+    <img class="logo" src="LOGO.png">
+
+    <div class="right">
+        <button class="rightButton" onclick="showSearchBox('searchBox')">
+            <i class="fa fa-search"></i>
+        </button>
+        <a href=""><i class="fa fa-user"></i></a>
+        <a href=""><i class="fa fa-heart"></i></a>
+        <a href=""><i class="fa fa-shopping-bag"></i></a>
+    </div>
+</nav>
+
+<div id="strap">
+    <hr class="strap" style="background-color:#ad3133;">
+    <hr class="strap" style="background-color:#120806;">
+    <hr class="strap" style="background-color:#497463;">
+</div>
+
+
+
+<div id="searchBox" style="display:none;">
+    <form class="searchForm" action="" method="post">
+        <input type="text" name="searchQuery" placeholder="What are you looking for?">
+        <button type="submit" class="submitIcon"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+</header>
+
+<div class="set">
+<div class="setPart part-0">
+    <div class="overLayer"><p>NEW BALANCE</p></div>
+    <div class="shadowButton button-1"><button class="shopNow">SHOP NOW</button></div>
+</div>
+<div class="setPart rightPart">
+    <div class="part-1">
+        <div class="overLayer"><p>NIKE AIR</p></div>
+        <div class="shadowButton button-1"><button class="shopNow">SHOP NOW</button></div>
+    </div>
+    <div class="part-2">
+        <div class="overLayer"><p>CONVERSE</p></div>
+        <div class="shadowButton button-1"><button class="shopNow">SHOP NOW</button></div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
