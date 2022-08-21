@@ -5,16 +5,16 @@
     font-family: montserrat, sans-serif;
 }
 html, body{
+    color: #120806;
     background-color: #f5f1ef;
     position: relative;
 }
 
 /* << NAVBAR >> */
-
 nav {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #f5f1ef;
     height: 70px;
@@ -24,21 +24,24 @@ nav {
     font-size: 13px;
 }
 nav a{
-    color:inherit;
+    color: #120806;
     text-decoration: none;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 nav a:hover{
     color:#474241;
 }
+.logo img{
+    width: 100%;
+}
 .logo {
-    width: 15%;
+    width: 16%;
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
 }
-.rightButton{
+.searchButton{
     padding-right: 15px;
     padding-left: 15px;
     background-color: transparent;
@@ -47,18 +50,19 @@ nav a:hover{
     cursor: pointer;
 }
 .right{
-    font-size: 17px;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
 }
 .strap{
 	height:5px;
     border:none;
 }
-.left a{
-    border: 2px solid #140706;
-    margin-right: 5px;
-}
-.left a:hover{
+
+.left a:hover, .left a.active, .left a.active{
     color:#f5f1ef;
+    border-radius: 5px;
+    border-radius: 5px;
     border: 2px solid #140706;
     background-color: #140706;
 }
@@ -68,7 +72,6 @@ nav a:hover{
 .searchForm{
     display: flex;
     justify-content: center;
-    justify-items: center;
 }
 #searchBox input{
     height: 30px;
@@ -77,6 +80,8 @@ nav a:hover{
     border: 1px solid grey;
     font-size: 15px;
     width: 80%;
+    border-radius: 5px;
+    border-radius: 5px;
 }
 .submitIcon{
     height: 30px;
@@ -86,6 +91,116 @@ nav a:hover{
     border: 1px solid grey !important;
     margin-left: 4px;
     cursor: pointer;
+    border-radius: 5px;
+    border-radius: 5px;
+}
+.navIcon{
+    position: relative;
+}
+.navIcon span{
+    border: 1px solid #f5f1ef;
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    width: 15px;
+    height: 15px;
+    font-size: x-small !important;
+    color: #f5f1ef;
+    background-color: #497463;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    margin-right: auto;
+}
+.rightSB{
+    color: #120806;
+    text-decoration: none;
+}
+#responsiveNav{
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #120806;
+    position: relative;
+}
+#responsiveNav a{
+    text-decoration: none;
+    display: block;
+    color: #f5f1ef;
+    padding: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+#responsiveNav a.active{
+    text-decoration: none;
+    display: block;
+    color: #120806;
+    background-color: #f5f1ef;
+    padding: 10px;
+    font-weight: bold;
+}
+.navContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.responsiveReplacement{
+    color: #120806;
+    margin-right: auto;
+    font-size: 19px;
+    display: none;
+    align-items: center;
+}
+.leftSB{
+    display: none;
+    color: #120806;
+}
+.checkbtn{
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    border: none;
+    background-color: transparent;
+    color: #120806;
+}
+@media (max-width : 1050px){
+    .responsiveReplacement{
+        display: flex !important;
+    }
+    .checkbtn{
+        display: inline-block !important;
+    }
+    .left{
+        display: none !important;
+    }
+}
+@media (max-width : 600px){
+    .rightSB {
+        display: none !important;
+    }
+    .Heart{
+        display: none !important;
+    }
+    .leftSB{
+        display: inline-block !important;
+    }
+    .specificBrandHP{
+        display: block !important;
+    }
+    .itemImage{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .brand {
+        width: 80px !important;
+        height: 80px !important;
+    }
 }
 /* << / NAVBAR >> */
 
@@ -106,7 +221,6 @@ nav a:hover{
     height: 100%;
 }
 .overLayer{
-    transition: 1s;
     color: #f5f1ef;
     font-size: 20px;
     font-weight: bold;
@@ -120,9 +234,9 @@ nav a:hover{
     background-color: #12080670;
     align-items: center;
     justify-content: center;
+    transition: 0.5s ease-in-out;
 }
 .overLayer:hover{
-    transition: 1s ease-in-out;
     background-color: transparent;
     text-shadow: none;
     color: transparent;
@@ -132,11 +246,11 @@ nav a:hover{
     width: 100%;
 }
 .part-0{
-    background-image: url(NB550.jpg);
+    background-image: url(images/NB550.jpg);
     background-size: cover;
 }
 .part-1{
-    background-image: url(NIKE.jpeg);
+    background-image: url(images/NIKE.jpeg);
     background-size: cover;
     position: relative;
     height: 50% !important;
@@ -144,7 +258,7 @@ nav a:hover{
     border-left: 10px solid #f5f1ef;
 }
 .part-2{
-    background-image: url(CONVERSE.png);
+    background-image: url(images/CONVERSE.png);
     background-size: cover;
     position: relative;
     height: 50% !important;
@@ -180,6 +294,7 @@ nav a:hover{
     text-decoration: none;
     box-shadow: -6px 6px 0px 0px #120806;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .shopNow:hover{
@@ -189,3 +304,189 @@ nav a:hover{
 /* << / SHOP NOW BUTTON >> */
 
 
+/* << LATEST DROPS >> */
+.latestDropsH{
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    letter-spacing: 5px;
+    color: #f5f1ef;
+    background-color: #120806;
+}
+
+.latestDrops{
+    background-color: #120806;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.latestDrops a{
+    text-decoration: none;
+    color: #f5f1ef;
+}
+
+.item{
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.itemImage {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.itemImage img{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.itemImage img:hover{
+    transform: rotate(-4deg) scale(1.1);
+
+}
+
+.itemName{
+    font-size: large;
+}
+
+.itemPrice{
+    color: #f5f1ef;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+    width: max-content;
+    border-radius: 5px;
+}
+
+.itemPromo{
+    font-weight: bold;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 1%;
+    border-radius: 15%;
+    color: #f5f1ef;
+    background-color: #ad3133;
+}
+/* << / LATEST DROPS >> */
+
+/* << SEE MORE >> */
+.seeMore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #120806;
+    padding: 35px;
+}
+.seeMore a{
+    text-decoration: none;
+}
+
+.seeMoreButton{
+    color: #f5f1ef;
+    padding: 10px;
+    font-size: large;
+    background-color: transparent;
+    border: 3px solid #f5f1ef;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 150px;
+    transition: ease-in-out;
+    transition-property: color, width;
+    transition-duration: .4s, .2s;
+}
+
+.seeMoreButton:hover{
+    color: #120806;
+    background-color: #f5f1ef;
+    width: 170px;
+}
+
+.specificBrandSMB{
+    color: #120806 !important;
+    border: 3px solid #120806 !important;
+}
+
+.SMB{
+    background-color: transparent !important;
+}
+
+.specificBrandSMB:hover{
+    color: #f5f1ef !important;
+    background-color: #120806 !important;
+}
+/* << / SEE MORE >> */
+
+/* << SPECIFIC Brand >> */
+.specificBrand{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.specificBrand a{
+    text-decoration: none;
+    color: #120806;
+}
+
+.specificBrand .itemPrice{
+    color: #120806;
+}
+
+.specificBrandH{
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    letter-spacing: 5px;
+}
+
+.specificBrandHP{
+    background-color: #ad3133;
+    margin-right: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #f5f1ef !important;
+    display: inline;
+    letter-spacing: normal !important;
+}
+/* << / SPECIFIC Brand >> */
+
+/* << BRANDS >> */
+.brands{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.brand{
+    width: 110px;
+    height: 110px;
+    border: 1px solid grey;
+    margin: 5px;
+    border-radius: 100%;
+}
+
+.brandImage{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.brandsH{
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    letter-spacing: 5px;
+}
+/* << / BRANDS >> */
