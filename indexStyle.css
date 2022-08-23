@@ -510,6 +510,83 @@ nav a:hover{
 }
 /* << / CATEGORIES >> */
 
+
+/* << BLOG >> */
+.blogH{
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+    letter-spacing: 5px;
+}
+.blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.blogPost{
+    width: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 10px 30px -20px #120806;
+    margin: 10px;
+}
+.postImage{
+    height: 180px;
+}
+.postImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.postTitle{
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.postContent{
+    font-size: 15px;
+    font-weight: 600;
+    height: 85px;
+    color: #726d6c;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.blogPost a{
+    text-decoration: none;
+    color: #f5f1ef;
+}
+.readMore{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.readMore p{
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    color: #f5f1ef;
+    padding: 10px;
+    background-color: #497463;
+    border-radius: 50px;
+    transition: 0.2s ease-in-out;
+}
+.readMore p:hover{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/* << / BLOG >> */
+
+
 /* << MEDIA >> */
 @media (max-width : 1050px){
     .responsiveReplacement{
@@ -521,6 +598,11 @@ nav a:hover{
     .left{
         display: none !important;
     }
+    .categoryImage{
+        width: 160px;
+        height: 160px;
+    }
+
 }
 @media (max-width : 600px){
     .rightSB {
@@ -542,6 +624,10 @@ nav a:hover{
     .brand {
         width: 80px !important;
         height: 80px !important;
+    }
+    .categoryImage{
+        width: 130px;
+        height: 130px;
     }
 }
 /* << / MEDIA >> */
