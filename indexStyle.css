@@ -315,11 +315,13 @@ nav a:hover{
     width: 100%;
     height: 100%;
     transition: 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .itemImage img:hover{
     transform: rotate(-4deg) scale(1.1);
-
+    -ms-transform: rotate(-4deg) scale(1.1);
 }
 
 .itemName{
@@ -587,6 +589,78 @@ nav a:hover{
 /* << / BLOG >> */
 
 
+/* << FOOTER >> */
+footer{
+    margin-top: 50px;
+    box-shadow: 0 0 0 1000px #120806be inset;
+    background-image: url(images/footer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+.footerSection{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f5f1ef;
+}
+.sectionTitle{
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.footerLink, .footerLink:visited{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: #f5f1ef;
+    display: block;
+}
+.footerLink:hover{
+    text-decoration: underline;
+}
+.socials{
+    width: 15px !important;
+    margin-right: 5px; 
+}
+.endFooter{
+    width: 100%;
+    padding: 20px;
+    color: #f5f1ef;
+    font-size: x-small;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.endFooterLeft a, .endFooterRight a:visited{
+    margin-left: 35px;
+    text-decoration: none;
+    color: #f5f1ef;
+}
+.endFooterLeft a:hover{
+    text-decoration: underline;
+    color: #f5f1ef;
+}
+.endFooterRight{
+    display: flex;
+    align-items: center;
+}
+.endFooterRight p{
+    margin-right: 15px;
+}
+.paySecurely{
+    height: 30px;
+    width: 40px;
+    margin-right: 7px;
+}
+/* << / FOOTER >> */
+
 /* << MEDIA >> */
 @media (max-width : 1050px){
     .responsiveReplacement{
@@ -603,6 +677,23 @@ nav a:hover{
         height: 160px;
     }
 
+}
+@media (max-width : 698px){
+    .endFooterLeft a{
+        margin-left: 15px;
+    }
+    .footerSection{
+        margin-left: 35px !important;
+        margin-right: 35px !important;
+    }
+}
+@media (max-width : 620px){
+    .endFooter{
+        justify-content: center !important;
+    }
+    .endFooterLeft{
+        padding-bottom: 10px;
+    }
 }
 @media (max-width : 600px){
     .rightSB {
@@ -628,6 +719,11 @@ nav a:hover{
     .categoryImage{
         width: 130px;
         height: 130px;
+    }
+}
+@media (max-width : 500px){
+    footer{
+        justify-content: space-between !important;
     }
 }
 /* << / MEDIA >> */
