@@ -13,9 +13,12 @@ html, body{
 /* << NAVBAR >> */
 nav {
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: 37vw 20vw 37Vw;
     justify-content: center;
     align-items: center;
+    justify-items: center;
+    align-content: center;
     background-color: #f5f1ef;
     height: 70px;
     font-weight: 700;
@@ -35,12 +38,6 @@ nav a:hover{
 .logo img{
     width: 100%;
 }
-.logo {
-    width: 16%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
 .searchButton{
     padding-right: 15px;
     padding-left: 15px;
@@ -53,6 +50,10 @@ nav a:hover{
     font-size: 19px;
     display: flex;
     align-items: center;
+    justify-self: end;
+}
+.left{
+    justify-self: start;
 }
 .strap{
 	height:5px;
@@ -113,9 +114,6 @@ nav a:hover{
     justify-content: center;
     align-items: center;
 }
-.left{
-    margin-right: auto;
-}
 .rightSB{
     color: #120806;
     text-decoration: none;
@@ -156,6 +154,7 @@ nav a:hover{
     font-size: 19px;
     display: none;
     align-items: center;
+    justify-self: start;
 }
 .leftSB{
     display: none;
@@ -694,7 +693,7 @@ footer{
         margin-right: 35px !important;
     }
 }
-@media (max-width : 620px){
+@media (max-width : 632px){
     .endFooter{
         justify-content: center !important;
     }
